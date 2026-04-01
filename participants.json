@@ -32,13 +32,51 @@
   },
   "age": {
     "Description": "Age of the participant as reported by the participant",
-    "Units": "years"
+    "Units": "years",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "sex": {
     "Description": "Gender of the participant as reported by the participant",
     "Levels": {
       "M": "Man",
       "F": "Woman"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "Woman": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        },
+        "Man": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        }
+      },
+      "MissingValues": []
     }
   },
   "deception": {
@@ -105,5 +143,18 @@
       "0": "No",
       "1": "Yes"
     }
+  },
+  "participant_id": {
+    "Description": "",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
+  },
+  "handedness": {
+    "Description": ""
   }
 }
